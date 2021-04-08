@@ -1,0 +1,12 @@
+{
+  "type": "etweaks:sewing",
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "addition": {
+    "item": "etweaks:pocket"
+  },
+  "result": {
+    "item": "minecraft:diamond_leggings"
+  }
+}

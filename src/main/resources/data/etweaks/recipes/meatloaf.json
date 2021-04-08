@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "etweaks:ground_beef"
+  },
+  "result": "etweaks:meatloaf",
+  "experience": 0.35,
+  "cookingtime": 200
+}

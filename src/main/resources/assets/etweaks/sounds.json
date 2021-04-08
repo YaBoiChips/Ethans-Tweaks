@@ -1,0 +1,12 @@
+{
+  "blender.blend": {
+    "category": "ambient",
+    "subtitle": "blender.blend",
+    "sounds": [
+      {
+        "name": "etweaks:blender/blender",
+        "stream": false
+      }
+    ]
+  }
+}
