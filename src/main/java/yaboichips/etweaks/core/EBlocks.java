@@ -6,7 +6,6 @@ import net.minecraft.particles.ParticleTypes;
 import net.minecraftforge.common.ToolType;
 import yaboichips.etweaks.ETweaks;
 import yaboichips.etweaks.common.blocks.BlenderBlock;
-import yaboichips.etweaks.common.blocks.SewingMachineBlock;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -39,7 +38,6 @@ public class EBlocks {
     public static final Block LIGHT_BLUE_TORCH = registerBlock("light_blue_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
 
     //
-    public static final Block SEWING_MACHINE = registerBlock("sewing_machine", new SewingMachineBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.ANCIENT_DEBRIS).harvestTool(ToolType.PICKAXE)));
     public static final Block BLENDER = registerBlock("blender", new BlenderBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.ANCIENT_DEBRIS).harvestTool(ToolType.PICKAXE)));
 
 

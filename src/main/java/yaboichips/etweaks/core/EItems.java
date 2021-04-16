@@ -35,7 +35,6 @@ public class EItems {
     };
 
     //block items
-    public static final Item SEWING_MACHINE = createItem(new BlockItem(EBlocks.SEWING_MACHINE, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.SEWING_MACHINE));
     public static final Item BLENDER = createItem(new BlockItem(EBlocks.BLENDER, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.BLENDER));
 
     //misc
@@ -51,7 +50,7 @@ public class EItems {
     public static final Item STEPUPAPPLE = createItem(new StepUpAppleItem(new Item.Properties().food(EFoods.STEPUPAPPLE).group(TWEAKS_TAB)), "step_up_apple");
     public static final Item ANTIFALLAPPLE = createItem(new AnitFallApple(new Item.Properties().food(EFoods.ANTIFALLAPPLE).group(TWEAKS_TAB)), "anti_fall_apple");
     public static final Item SUPERMEAL = createItem(new Item(new Item.Properties().food(EFoods.SUPERMEAL).group(TWEAKS_TAB)), "supermeal");
-    public static final Item MEATLOAF = createItem(new Item(new Item.Properties().food(EFoods.MEATLOAF).group(TWEAKS_TAB)), "meatloaf.json");
+    public static final Item MEATLOAF = createItem(new Item(new Item.Properties().food(EFoods.MEATLOAF).group(TWEAKS_TAB)), "meatloaf");
     public static final Item GROUND_BEEF = createItem(new Item(new Item.Properties().food(EFoods.GROUND_BEEF).group(TWEAKS_TAB)), "ground_beef");
 
     //end rods

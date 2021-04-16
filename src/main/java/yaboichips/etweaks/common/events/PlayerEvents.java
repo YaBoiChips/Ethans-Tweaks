@@ -9,7 +9,6 @@ import net.minecraft.inventory.container.SimpleNamedContainerProvider;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -19,8 +18,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.network.NetworkHooks;
 import yaboichips.etweaks.ETweaks;
-import yaboichips.etweaks.client.inventories.PocketInventory;
-import yaboichips.etweaks.common.containers.PocketContainer;
 import yaboichips.etweaks.common.items.tools.RocketBootsItem;
 import yaboichips.etweaks.core.EItems;
 import yaboichips.etweaks.core.EKeybinds;
@@ -66,7 +63,7 @@ public class PlayerEvents {
         if (player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == EItems.ROCKET_BOOTS) {
             if (player.isElytraFlying()) {
                 if (EKeybinds.ROCKET_KEY.isPressed()) {
-                    if(RocketBootsItem.isUsable(itemstack)) {
+                    if (RocketBootsItem.isUsable(itemstack)) {
                         if (!worldIn.isRemote) {
                             FireworkRocketEntity firework = new FireworkRocketEntity(worldIn, itemstack, player);
                             worldIn.addEntity(firework);
@@ -86,23 +83,6 @@ public class PlayerEvents {
                     player.setMotion(vector3d.x, 3, vector3d.z);
                     player.world.playSound(player, player.getPosX(), player.getPosY(), player.getPosZ(), SoundEvents.ENTITY_FIREWORK_ROCKET_LAUNCH, SoundCategory.AMBIENT, 3.0F, 1.0F);
                     player.getCooldownTracker().setCooldown(itemstack.getItem(), 600);
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public static void doPockets(TickEvent.PlayerTickEvent event) {
-        PlayerEntity player = event.player;
-        ItemStack stack = event.player.getItemStackFromSlot(EquipmentSlotType.LEGS);
-        if (!player.getEntityWorld().isRemote){
-            if (player instanceof ServerPlayerEntity) {
-                if (stack.hasTag()) {
-                    if (stack.getTag().getInt("Pocket") == 1) {
-                        if (EKeybinds.POCKET_KEY.isPressed()) {
-                            NetworkHooks.openGui((ServerPlayerEntity) player, new SimpleNamedContainerProvider((id, playerInventory, entity) -> new PocketContainer(id, player.inventory, new PocketInventory()), player.getItemStackFromSlot(EquipmentSlotType.LEGS).getDisplayName()));
-                        }
-                    }
                 }
             }
         }

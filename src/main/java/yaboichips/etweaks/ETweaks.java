@@ -19,8 +19,7 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import yaboichips.etweaks.client.gui.PocketScreen;
-import yaboichips.etweaks.client.gui.SewingMachineScreen;
+import yaboichips.etweaks.client.renderers.ECutOutTextures;
 import yaboichips.etweaks.core.*;
 
 import javax.annotation.Nonnull;
@@ -39,8 +38,6 @@ public class ETweaks {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-        EContainers.CONTAINER_TYPES.register(modEventBus);
-        modEventBus.register(new ERecipies.ModRecipeSerializers());
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -51,9 +48,8 @@ public class ETweaks {
 
     private void clientSetup(final FMLClientSetupEvent event) {
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
-        ScreenManager.registerFactory(EContainers.POCKET_CONTAINER.get(), PocketScreen::new);
-        ScreenManager.registerFactory(EContainers.SEWING_CONTAINER.get(), SewingMachineScreen::new);
-        EKeybinds.register();
+               EKeybinds.register();
+        ECutOutTextures.renderCutOuts();
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
