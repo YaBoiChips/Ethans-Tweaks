@@ -29,6 +29,18 @@ public class BlenderBlock extends Block {
                 player.addItemStackToInventory(EItems.GROUND_BEEF.getDefaultInstance());
                 if (!player.isCreative())
                     stack.shrink(1);
+            } else if (stack.getItem() == Items.APPLE) {
+                worldIn.playSound(player, player.getPosX(), player.getPosY(), player.getPosZ(), ESounds.BLENDER, SoundCategory.AMBIENT, 0.7F, 1F);
+                player.getCooldownTracker().setCooldown(stack.getItem(), 25);
+                player.addItemStackToInventory(EItems.APPLE_JUICE.getDefaultInstance());
+                if (!player.isCreative())
+                    stack.shrink(1);
+            } else if (stack.getItem() == Items.SWEET_BERRIES) {
+                worldIn.playSound(player, player.getPosX(), player.getPosY(), player.getPosZ(), ESounds.BLENDER, SoundCategory.AMBIENT, 0.7F, 1F);
+                player.getCooldownTracker().setCooldown(stack.getItem(), 25);
+                player.addItemStackToInventory(EItems.SWEET_BERRY_JUICE.getDefaultInstance());
+                if (!player.isCreative())
+                    stack.shrink(1);
             }
         }
             return ActionResultType.SUCCESS;

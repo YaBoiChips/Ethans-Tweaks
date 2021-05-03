@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bottom=false": {
+      "model": "etweaks:block/stiff_scaffolding_stable"
+    },
+    "bottom=true": {
+      "model": "etweaks:block/stiff_scaffolding_unstable"
+    }
+  }
+}

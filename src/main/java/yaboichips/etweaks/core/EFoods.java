@@ -20,5 +20,7 @@ public class EFoods {
     public static final Food SUPERMEAL = (new Food.Builder()).hunger(7).saturation(2.4F).build();
     public static final Food GROUND_BEEF = (new Food.Builder()).hunger(1).saturation(0.3f).effect(new EffectInstance(Effects.POISON, 200, 0), 1).build();
     public static final Food MEATLOAF = (new Food.Builder()).hunger(6).saturation(0.9f).build();
+    public static final Food APPLE_JUICE = (new Food.Builder()).hunger(3).saturation(0.9f).fastToEat().build();
+    public static final Food SWEET_BERRY_JUICE = (new Food.Builder()).hunger(3).saturation(0.9f).fastToEat().build();
 
 }

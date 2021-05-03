@@ -6,4 +6,5 @@ import yaboichips.etweaks.ETweaks;
 
 public class ESounds {
     public static final SoundEvent BLENDER = new SoundEvent(new ResourceLocation(ETweaks.MOD_ID, "blender.blend"));
+    public static final SoundEvent WAKING_UP = new SoundEvent(new ResourceLocation(ETweaks.MOD_ID, "music.wakingup"));
 }

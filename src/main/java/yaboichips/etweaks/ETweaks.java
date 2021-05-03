@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 public class ETweaks {
 
     public static final String MOD_ID = "etweaks";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public ETweaks() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -99,27 +99,27 @@ public class ETweaks {
     }
 
     /* Notes:
-    Editable Signs
+    -Editable Signs-
     -No Fall Damage Apple-
-    Time Set Day/Night Staff
+    -Time Set Day/Night Staff-
     Step up apple
     -Rocket Boots-
-    -Super Saturating Food-
-    -Villager Traps-
-    -Edible Pickles-
-    -Reusable Ender Pearl-
+    -Super Saturating Food- (need texture)
+    -Villager Traps- (need texture)
+    -Edible Pickles- (need texture)
+    -Reusable Ender Pearl- (need texture)
     Float Resistance
     Wither Resistance
-    Repairable Anvil
-    Ground Beef
-    Meatloaf
-    Stiff Scaffolding
-    Zoom Pickaxe
+    -Repairable Anvil-
+    -Ground Beef- (need texture)
+    -Meatloaf- (need texture)
+    -Stiff Scaffolding-
+    Zoom Pickaxe (need texture)
     Coloured Lamps
-    Coloured Torches
+    Coloured Torches (need texture)
     Banner Duplicator
-    Blender
-    Juices
+    -Blender-
+    Juices (need texture)
     I'm Waking Up Music Disc
      */
 

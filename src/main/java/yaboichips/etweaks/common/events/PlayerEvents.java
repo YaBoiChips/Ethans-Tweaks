@@ -61,8 +61,8 @@ public class PlayerEvents {
         ItemStack itemstack = player.getItemStackFromSlot(EquipmentSlotType.FEET);
         World worldIn = player.world;
         if (player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == EItems.ROCKET_BOOTS) {
-            if (player.isElytraFlying()) {
-                if (EKeybinds.ROCKET_KEY.isPressed()) {
+            if (EKeybinds.ROCKET_KEY.isPressed()) {
+                if (player.isElytraFlying()) {
                     if (RocketBootsItem.isUsable(itemstack)) {
                         if (!worldIn.isRemote) {
                             FireworkRocketEntity firework = new FireworkRocketEntity(worldIn, itemstack, player);
@@ -77,12 +77,13 @@ public class PlayerEvents {
                         }
                     }
                 }
-            } else if (EKeybinds.ROCKET_KEY.isPressed()) {
-                if (!player.getCooldownTracker().hasCooldown(itemstack.getItem())) {
-                    Vector3d vector3d = player.getMotion();
-                    player.setMotion(vector3d.x, 3, vector3d.z);
-                    player.world.playSound(player, player.getPosX(), player.getPosY(), player.getPosZ(), SoundEvents.ENTITY_FIREWORK_ROCKET_LAUNCH, SoundCategory.AMBIENT, 3.0F, 1.0F);
-                    player.getCooldownTracker().setCooldown(itemstack.getItem(), 600);
+                if (player.isOnGround()) {
+                    if (!player.getCooldownTracker().hasCooldown(itemstack.getItem())) {
+                        Vector3d vector3d = player.getMotion();
+                        player.setMotion(vector3d.x, 3, vector3d.z);
+                        player.world.playSound(player, player.getPosX(), player.getPosY(), player.getPosZ(), SoundEvents.ENTITY_FIREWORK_ROCKET_LAUNCH, SoundCategory.AMBIENT, 3.0F, 1.0F);
+                        player.getCooldownTracker().setCooldown(itemstack.getItem(), 600);
+                    }
                 }
             }
         }

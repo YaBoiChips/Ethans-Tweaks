@@ -8,5 +8,16 @@
         "stream": false
       }
     ]
+  },
+
+  "music.wakingup": {
+    "category": "record",
+    "subtitle": "blender.blend",
+    "sounds": [
+      {
+        "name": "etweaks:blender/music.wakingup",
+        "stream": false
+      }
+    ]
   }
 }

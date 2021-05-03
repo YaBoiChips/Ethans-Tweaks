@@ -11,7 +11,8 @@ public class ECutOutTextures {
 
     public static void renderCutOuts(){
         Block[] blocks = {
-                EBlocks.BLENDER.getBlock()
+                EBlocks.BLENDER.getBlock(),
+                EBlocks.STIFF_SCAFFOLDING.getBlock()
         };
         Arrays.stream(blocks).forEach((block) -> RenderTypeLookup.setRenderLayer(block, RenderType.getCutoutMipped()));
 

@@ -2,10 +2,12 @@ package yaboichips.etweaks.core;
 
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraftforge.common.ToolType;
 import yaboichips.etweaks.ETweaks;
 import yaboichips.etweaks.common.blocks.BlenderBlock;
+import yaboichips.etweaks.common.blocks.StiffScaffoldingBlock;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -37,9 +39,9 @@ public class EBlocks {
     public static final Block PURPLE_TORCH = registerBlock("purple_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
     public static final Block LIGHT_BLUE_TORCH = registerBlock("light_blue_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
 
-    //
-    public static final Block BLENDER = registerBlock("blender", new BlenderBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.ANCIENT_DEBRIS).harvestTool(ToolType.PICKAXE)));
-
+    //misc
+    public static final Block BLENDER = registerBlock("blender", new BlenderBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.ANCIENT_DEBRIS).notSolid().harvestTool(ToolType.PICKAXE)));
+    public static final Block STIFF_SCAFFOLDING = registerBlock("stiff_scaffolding", new StiffScaffoldingBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SAND).doesNotBlockMovement().sound(SoundType.SCAFFOLDING).variableOpacity()));
 
     static @Nonnull
     <T extends Block> T registerBlock(String id, @Nonnull T block) {

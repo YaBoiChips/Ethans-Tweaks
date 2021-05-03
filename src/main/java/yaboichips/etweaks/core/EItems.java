@@ -4,12 +4,18 @@ import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.registry.Registry;
 import yaboichips.etweaks.ETweaks;
+import yaboichips.etweaks.common.items.StiffScaffoldingItem;
 import yaboichips.etweaks.common.items.foods.AnitFallApple;
 import yaboichips.etweaks.common.items.foods.StepUpAppleItem;
+import yaboichips.etweaks.common.items.misc.JuiceItem;
 import yaboichips.etweaks.common.items.misc.ReusableEnderPearl;
 import yaboichips.etweaks.common.items.misc.VillagerTrapItem;
+import yaboichips.etweaks.common.items.tools.DayStaffItem;
+import yaboichips.etweaks.common.items.tools.ModTiers;
+import yaboichips.etweaks.common.items.tools.NightStaffItem;
 import yaboichips.etweaks.common.items.tools.RocketBootsItem;
 
 import java.util.ArrayList;
@@ -43,7 +49,14 @@ public class EItems {
     public static final Item REDDIT_SILVER = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "reddit_silver");
     public static final Item REDDIT_GOLD = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "reddit_gold");
     public static final Item POCKET = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "pocket");
+    public static final Item STIFF_SCAFFOLDING = createItem(new StiffScaffoldingItem(EBlocks.STIFF_SCAFFOLDING, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.STIFF_SCAFFOLDING));
+    public static final Item MUSIC_DISC_IM_WAKING_UP = createItem(new MusicDiscItem(6, ESounds.WAKING_UP, (new Item.Properties()).maxStackSize(1).group(TWEAKS_TAB).rarity(Rarity.RARE)), "music_disc_im_waking_up");
+
+    //tools
     public static final Item ROCKET_BOOTS = createItem(new RocketBootsItem(ArmorMaterial.NETHERITE, EquipmentSlotType.FEET, (new Item.Properties()).group(TWEAKS_TAB).isImmuneToFire()), "rocket_boots");
+    public static final Item ZOOM_PICKAXE = createItem(new PickaxeItem(ModTiers.ZoomTier.ZOOM, 1, -2.8F, (new Item.Properties()).group(TWEAKS_TAB).isImmuneToFire()), "zoom_pickaxe");
+    public static final Item DAY_STAFF_ITEM = createItem(new DayStaffItem(new Item.Properties().group(TWEAKS_TAB)), "day_staff");
+    public static final Item NIGHT_STAFF_ITEM = createItem(new NightStaffItem(new Item.Properties().group(TWEAKS_TAB)), "night_staff");
 
     //food
     public static final Item PICKLE = createItem(new Item(new Item.Properties().food(EFoods.PICKLE).group(TWEAKS_TAB)), "pickle");
@@ -52,6 +65,8 @@ public class EItems {
     public static final Item SUPERMEAL = createItem(new Item(new Item.Properties().food(EFoods.SUPERMEAL).group(TWEAKS_TAB)), "supermeal");
     public static final Item MEATLOAF = createItem(new Item(new Item.Properties().food(EFoods.MEATLOAF).group(TWEAKS_TAB)), "meatloaf");
     public static final Item GROUND_BEEF = createItem(new Item(new Item.Properties().food(EFoods.GROUND_BEEF).group(TWEAKS_TAB)), "ground_beef");
+    public static final Item APPLE_JUICE = createItem(new JuiceItem(new Item.Properties().food(EFoods.APPLE_JUICE).group(TWEAKS_TAB)), "apple_juice");
+    public static final Item SWEET_BERRY_JUICE = createItem(new JuiceItem(new Item.Properties().food(EFoods.SWEET_BERRY_JUICE).group(TWEAKS_TAB)), "sweet_berry_juice");
 
     //end rods
     public static final Item RED_END_ROD = createItem(new BlockItem(EBlocks.RED_END_ROD, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.RED_END_ROD));
