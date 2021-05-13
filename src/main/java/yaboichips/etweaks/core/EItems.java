@@ -7,6 +7,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.registry.Registry;
 import yaboichips.etweaks.ETweaks;
+import yaboichips.etweaks.common.items.RoundShieldItem;
 import yaboichips.etweaks.common.items.StiffScaffoldingItem;
 import yaboichips.etweaks.common.items.foods.AnitFallApple;
 import yaboichips.etweaks.common.items.foods.StepUpAppleItem;
@@ -57,6 +58,7 @@ public class EItems {
     public static final Item ZOOM_PICKAXE = createItem(new PickaxeItem(ModTiers.ZoomTier.ZOOM, 1, -2.8F, (new Item.Properties()).group(TWEAKS_TAB).isImmuneToFire()), "zoom_pickaxe");
     public static final Item DAY_STAFF_ITEM = createItem(new DayStaffItem(new Item.Properties().group(TWEAKS_TAB)), "day_staff");
     public static final Item NIGHT_STAFF_ITEM = createItem(new NightStaffItem(new Item.Properties().group(TWEAKS_TAB)), "night_staff");
+    public static final Item ROUND_SHIELD_ITEM = createItem(new RoundShieldItem(new Item.Properties().group(TWEAKS_TAB)), "round_shield");
 
     //food
     public static final Item PICKLE = createItem(new Item(new Item.Properties().food(EFoods.PICKLE).group(TWEAKS_TAB)), "pickle");
