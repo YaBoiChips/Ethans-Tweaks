@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#C",
+        " P"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:cooked_beef"
+        },
+        "C": {
+            "item": "minecraft:carrot"
+        },
+        "P": {
+            "item": "minecraft:potato"
+        }
+    },
+    "result": {
+        "item": "etweaks:supermeal",
+        "count": 1
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "NZN",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:redstone_block"
+        },
+        "N": {
+            "item": "minecraft:netherite_pickaxe"
+        },
+        "Z": {
+            "item": "minecraft:nether_star"
+        }
+    },
+    "result": {
+        "item": "etweaks:zoom_pickaxe",
+        "count": 1
+    }
+}

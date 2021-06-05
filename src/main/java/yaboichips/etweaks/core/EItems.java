@@ -47,11 +47,9 @@ public class EItems {
     //misc
     public static final Item VILLAGER_TRAP = createItem(new VillagerTrapItem(new Item.Properties().group(TWEAKS_TAB)), "villager_trap");
     public static final Item REUSEABLE_ENDER_PEARL = createItem(new ReusableEnderPearl(new Item.Properties().group(TWEAKS_TAB)), "reusable_ender_pearl");
-    public static final Item REDDIT_SILVER = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "reddit_silver");
-    public static final Item REDDIT_GOLD = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "reddit_gold");
-    public static final Item POCKET = createItem(new Item(new Item.Properties().group(TWEAKS_TAB)), "pocket");
     public static final Item STIFF_SCAFFOLDING = createItem(new StiffScaffoldingItem(EBlocks.STIFF_SCAFFOLDING, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.STIFF_SCAFFOLDING));
     public static final Item MUSIC_DISC_IM_WAKING_UP = createItem(new MusicDiscItem(6, ESounds.WAKING_UP, (new Item.Properties()).maxStackSize(1).group(TWEAKS_TAB).rarity(Rarity.RARE)), "music_disc_im_waking_up");
+    public static final Item TUBE_ENTRANCE_BLOCK = createItem(new BlockItem(EBlocks.TUBE_ENTRANCE_BLOCK, new Item.Properties().group(TWEAKS_TAB)), Registry.BLOCK.getKey(EBlocks.TUBE_ENTRANCE_BLOCK));
 
     //tools
     public static final Item ROCKET_BOOTS = createItem(new RocketBootsItem(ArmorMaterial.NETHERITE, EquipmentSlotType.FEET, (new Item.Properties()).group(TWEAKS_TAB).isImmuneToFire()), "rocket_boots");
@@ -62,7 +60,6 @@ public class EItems {
 
     //food
     public static final Item PICKLE = createItem(new Item(new Item.Properties().food(EFoods.PICKLE).group(TWEAKS_TAB)), "pickle");
-    public static final Item STEPUPAPPLE = createItem(new StepUpAppleItem(new Item.Properties().food(EFoods.STEPUPAPPLE).group(TWEAKS_TAB)), "step_up_apple");
     public static final Item ANTIFALLAPPLE = createItem(new AnitFallApple(new Item.Properties().food(EFoods.ANTIFALLAPPLE).group(TWEAKS_TAB)), "anti_fall_apple");
     public static final Item SUPERMEAL = createItem(new Item(new Item.Properties().food(EFoods.SUPERMEAL).group(TWEAKS_TAB)), "supermeal");
     public static final Item MEATLOAF = createItem(new Item(new Item.Properties().food(EFoods.MEATLOAF).group(TWEAKS_TAB)), "meatloaf");

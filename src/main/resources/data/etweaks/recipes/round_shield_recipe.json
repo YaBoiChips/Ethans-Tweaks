@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " i ",
+        "iSi",
+        " i "
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:iron_ingot"
+        },
+        "S": {
+            "item": "minecraft:shield"
+        }
+    },
+    "result": {
+        "item": "etweaks:round_shield",
+        "count": 1
+    }
+}

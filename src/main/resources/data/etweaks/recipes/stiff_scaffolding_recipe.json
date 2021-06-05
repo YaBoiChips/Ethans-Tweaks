@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "#S#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:iron_nugget"
+        },
+        "S": {
+            "item": "minecraft:scaffolding"
+        }
+    },
+    "result": {
+        "item": "etweaks:stiff_scaffolding",
+        "count": 1
+    }
+}

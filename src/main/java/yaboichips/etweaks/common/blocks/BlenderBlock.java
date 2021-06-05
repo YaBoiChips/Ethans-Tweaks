@@ -44,6 +44,5 @@ public class BlenderBlock extends Block {
             }
         }
             return ActionResultType.SUCCESS;
-
     }
 }

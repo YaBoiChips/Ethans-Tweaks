@@ -76,10 +76,10 @@ public class PlayerEvents {
                     stack.damageItem(1, playerIn, (player) -> {
                         playerIn.sendBreakAnimation(playerIn.getActiveHand());
                     });
-                    RoundShieldEntity tridententity = new RoundShieldEntity(worldIn, playerIn, stack);
-                    tridententity.setDirectionAndMovement(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 3F + (float) 3 * 0.5F, 1.0F);
-                    worldIn.addEntity(tridententity);
-                    worldIn.playMovingSound((PlayerEntity) null, tridententity, SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.PLAYERS, 1.0F, 1.0F);
+                    RoundShieldEntity roundShieldEntity = new RoundShieldEntity(worldIn, playerIn, stack);
+                    roundShieldEntity.setDirectionAndMovement(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 3F + (float) 3 * 0.5F, 1.0F);
+                    worldIn.addEntity(roundShieldEntity);
+                    worldIn.playMovingSound((PlayerEntity) null, roundShieldEntity, SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.PLAYERS, 1.0F, 1.0F);
                     playerIn.inventory.deleteStack(stack);
 
                 }

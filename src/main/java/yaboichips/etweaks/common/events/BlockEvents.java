@@ -66,21 +66,21 @@ public class BlockEvents {
     public static void fixAnvil(PlayerInteractEvent.RightClickBlock event){
         PlayerEntity player = event.getPlayer();
         World world = player.world;
-        Item stack = player.getHeldItemMainhand().getItem();
+        Item item = player.getHeldItemMainhand().getItem();
+        ItemStack stack = player.getHeldItemMainhand();
         BlockPos pos = event.getPos();
         Block block = event.getWorld().getBlockState(pos).getBlock();
         if (player.isCrouching()){
-            if (stack == Items.IRON_INGOT){
+            if (item == Items.IRON_INGOT){
                 if(block == Blocks.DAMAGED_ANVIL) {
                     world.setBlockState(pos, Blocks.CHIPPED_ANVIL.getDefaultState());
                     world.playSound(player, pos, SoundEvents.BLOCK_ANVIL_USE, SoundCategory.AMBIENT, 1.0f, 1.0f);
-                    stack.getDefaultInstance().shrink(1);
-
+                    stack.shrink(1);
                 }
                 else if(block == Blocks.CHIPPED_ANVIL) {
                 world.setBlockState(pos, Blocks.ANVIL.getDefaultState());
                 world.playSound(player, pos, SoundEvents.BLOCK_ANVIL_USE, SoundCategory.AMBIENT, 1.0f, 1.0f);
-                stack.getDefaultInstance().shrink(1);
+                stack.shrink(1);
                 }
             }
         }

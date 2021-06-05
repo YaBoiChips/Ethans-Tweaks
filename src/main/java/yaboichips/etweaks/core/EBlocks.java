@@ -8,6 +8,7 @@ import net.minecraftforge.common.ToolType;
 import yaboichips.etweaks.ETweaks;
 import yaboichips.etweaks.common.blocks.BlenderBlock;
 import yaboichips.etweaks.common.blocks.StiffScaffoldingBlock;
+import yaboichips.etweaks.common.blocks.TubeEntranceBlock;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -27,21 +28,11 @@ public class EBlocks {
     public static final Block BLACK_END_ROD = registerBlock("black_end_rod", new EndRodBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().setLightLevel((state) -> 14)));
     public static final Block PURPLE_END_ROD = registerBlock("purple_end_rod", new EndRodBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().setLightLevel((state) -> 14)));
     public static final Block LIGHT_BLUE_END_ROD = registerBlock("light_blue_end_rod", new EndRodBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).zeroHardnessAndResistance().setLightLevel((state) -> 14)));
-
-    //torches
-    public static final Block RED_TORCH = registerBlock("red_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block BLUE_TORCH = registerBlock("blue_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block GREEN_TORCH = registerBlock("green_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block YELLOW_TORCH = registerBlock("yellow_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block ORANGE_TORCH = registerBlock("orange_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block PINK_TORCH = registerBlock("pink_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block BLACK_TORCH = registerBlock("black_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block PURPLE_TORCH = registerBlock("purple_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-    public static final Block LIGHT_BLUE_TORCH = registerBlock("light_blue_torch", new TorchBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS).doesNotBlockMovement().zeroHardnessAndResistance().setLightLevel((state) -> 14).sound(SoundType.WOOD), ParticleTypes.FLAME));
-
+    
     //misc
     public static final Block BLENDER = registerBlock("blender", new BlenderBlock(AbstractBlock.Properties.create(Material.IRON).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.ANCIENT_DEBRIS).notSolid().harvestTool(ToolType.PICKAXE)));
     public static final Block STIFF_SCAFFOLDING = registerBlock("stiff_scaffolding", new StiffScaffoldingBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SAND).doesNotBlockMovement().sound(SoundType.SCAFFOLDING).variableOpacity()));
+    public static final Block TUBE_ENTRANCE_BLOCK = registerBlock("tube_entrance_block", new TubeEntranceBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(4.0f, 1.5f).sound(SoundType.STONE).notSolid().harvestTool(ToolType.PICKAXE)));
 
     static @Nonnull
     <T extends Block> T registerBlock(String id, @Nonnull T block) {

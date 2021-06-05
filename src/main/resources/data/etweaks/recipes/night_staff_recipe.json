@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "/"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:nether_star"
+        },
+        "/": {
+            "item": "minecraft:end_rod"
+        }
+    },
+    "result": {
+        "item": "etweaks:night_staff",
+        "count": 1
+    }
+}

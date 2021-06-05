@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "etweaks:item/music_disc_im_waking_up"
+  }
+}
